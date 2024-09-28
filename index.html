@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display XML Data in Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        function loadXML() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    displayXML(this);
+                }
+            };
+            xhttp.open("GET", "loginform.xml", true);  
+            xhttp.send();
+        }
+
+        function displayXML(xml) {
+            var xmlDoc = xml.responseXML;
+            var table = "<tr><th>Name</th><th>Email</th><th>Password</th><th>Age</th><th>Gender</th><th>Favourites</th><th>State</th></tr>";
+            var users = xmlDoc.getElementsByTagName("user");
+            for (var i = 0; i < users.length; i++) {
+                var name = users[i].getElementsByTagName("name")[0].childNodes[0].nodeValue;
+                var email = users[i].getElementsByTagName("email")[0].childNodes[0].nodeValue;
+                var password = users[i].getElementsByTagName("password")[0].childNodes[0].nodeValue;
+                var age = users[i].getElementsByTagName("age")[0].childNodes[0].nodeValue;
+                var gender = users[i].getElementsByTagName("gender")[0].childNodes[0].nodeValue;
+
+                // Get the list of favourite items
+                var favourites = users[i].getElementsByTagName("favourites")[0].getElementsByTagName("item");
+                var favList = "";
+                for (var j = 0; j < favourites.length; j++) {
+                    favList += favourites[j].childNodes[0].nodeValue + " ";
+                }
+
+                var state = users[i].getElementsByTagName("state")[0].childNodes[0].nodeValue;
+
+                table += "<tr><td>" + name + "</td><td>" + email + "</td><td>" + password + "</td><td>" + age + "</td><td>" + gender + "</td><td>" + favList.trim() + "</td><td>" + state + "</td></tr>";
+            }
+            document.getElementById("xmlTable").innerHTML = table;
+        }
+    </script>
+</head>
+<body onload="loadXML()">
+    <h2>User Information from XML</h2>
+    <table id="xmlTable"></table>
+</body>
+</html>

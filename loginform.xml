@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <name>Shreya</name>
+        <email>shreya21@gmail.com</email>
+        <password>password123</password>
+        <age>25</age>
+        <gender>Female</gender>
+        <favourites>
+            <item>Sweet</item>
+            <item>Salty</item>
+        </favourites>
+        <state>Tamilnadu</state>
+    </user>
+    <user>
+        <name>Sam</name>
+        <email>sam30@gmail.com</email>
+        <password>password456</password>
+        <age>22</age>
+        <gender>Male</gender>
+        <favourites>
+            <item>Savory</item>
+            <item>Sour</item>
+        </favourites>
+        <state>Maharastra</state>
+    </user>
+    <user>
+        <name>Suji</name>
+        <email>suji@gmail.com</email>
+        <password>password678</password>
+        <age>21</age>
+        <gender>Female</gender>
+        <favourites>
+            <item>Sweet</item>
+            <item>Spicy</item>
+        </favourites>
+        <state>Karnataka</state>
+    </user>
+    <user>
+        <name>Swetha</name>
+        <email>swe56@gmail.com</email>
+        <password>password34</password>
+        <age>20</age>
+        <gender>Female</gender>
+        <favourites>
+            <item>Savory</item>
+            <item>Salty</item>
+        </favourites>
+        <state>Andhra Pradesh</state>
+    </user>
+    <user>
+        <name>Dhanwin</name>
+        <email>dhanwin34@gmail.com</email>
+        <password>password90</password>
+        <age>30</age>
+        <gender>Female</gender>
+        <favourites>
+            <item>Salty</item>
+            <item>Sour</item>
+        </favourites>
+        <state>West Bengal</state>
+    </user>
+</users>
+

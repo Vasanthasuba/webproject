@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+    <link rel="stylesheet" href="p1.css">
+</head>
+<body>
+    <form id="myForm">
+        <h2>CREATE ACCOUNT</h2>
+        
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="1" max="120" required>
+        </div>
+        
+        <div class="form-group">
+            <label>Gender:</label>
+            <div class="radio-group">
+                <label><input type="radio" id="male" name="gender" value="male" required> Male</label>
+                <label><input type="radio" id="female" name="gender" value="female" required> Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Choose Your favourites:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="Sweet" name="favourites" value="reading"> Sweet</label>
+                <label><input type="checkbox" id="Salty" name="favourites" value="traveling"> Salty</label>
+                <label><input type="checkbox" id="Savory" name="favourites" value="sports"> Savory</label>
+                <label><input type="checkbox" id="Sour" name="favourites" value="sports"> Sour</label>
+                <label><input type="checkbox" id="Spicy<" name="favourites" value="sports">Spicy</label>
+                <label><input type="checkbox" id="Bitter" name="favourites" value="sports"> Bitter</label>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="country">State:</label>
+            <select id="country" name="country" required>
+                <option value="">Select</option>
+                <option value="India">TamilNadu</option>
+                <option value="USA">Kerala</option>
+                <option value="UK">Karnataka</option>
+                 <option value="UK">Andhra Pradesh</option>
+                  <option value="UK">Maharashtra</option>
+            </select>
+        </div>
+        
+        <button type="submit"><a href="C:\Users\petch\OneDrive\Desktop\iwt\p3.html">Submit</button>
+    </form>
+
+    <script src="p2.js"></script>
+</body>
+</html>

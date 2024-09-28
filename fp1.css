@@ -1,0 +1,39 @@
+{
+    padding:0;
+    margin:0;
+}
+.receipe{
+    background:url(https://assets-global.website-files.com/60f72e8da92b444d2d788ee5/6124bc62f54fd325b2177042_ella-olsson-oPBjWBCcAEo-unsplash.jpg)no-repeat;
+    background-size: cover;
+    height:110vh;
+}
+
+
+
+.navbar{
+    height: 80px;
+    width: 100;
+}
+.logo{
+    margin 0;
+    width:80px;
+    height:auto;
+    padding:0;
+}
+.receipe .center{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-family:sans-serif;
+}
+button{
+   border-style:solid;
+   height:50px;
+   width:90px;
+   color:black;
+   background-color:orange;
+   margin-left:40%;
+   text-align:center;
+   margin-top:30px;
+}
